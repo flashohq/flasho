@@ -1,0 +1,83 @@
+.notification-wrapper {
+  @apply fixed top-2.5 right-2.5 z-[1000] w-[400px];
+}
+
+.notification-item {
+  @apply mb-5 w-[400px] overflow-hidden rounded-[10px] text-white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  animation: SlideLeft 0.4s;
+  animation-fill-mode: forwards;
+}
+
+.notification-item .title {
+  @apply text-lg font-black;
+}
+
+.notification-item .description {
+  @apply text-base font-semibold;
+}
+
+.notification-item.exit {
+  animation: SlideRight 0.4s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes SlideLeft {
+  0% {
+    margin-left: 120%;
+  }
+
+  100% {
+    margin-left: 0;
+  }
+}
+
+@keyframes SlideRight {
+  0% {
+    margin-left: 0;
+  }
+
+  100% {
+    margin-left: 120%;
+  }
+}
+
+.notification-item p {
+  @apply m-0 py-2.5 px-5;
+}
+
+.notification-item .bar {
+  @apply h-0;
+}
+
+.notification-item.success {
+  @apply bg-success;
+}
+
+.notification-item.danger {
+  @apply bg-danger;
+}
+
+.notification-item.info {
+  @apply bg-info;
+}
+
+.notification-item.warning {
+  @apply bg-warning;
+}
+
+.notification-item.success .bar {
+  @apply bg-darkgreen;
+}
+
+.notification-item.danger .bar {
+  @apply bg-darkred2;
+}
+
+.notification-item.info .bar {
+  @apply bg-darkblue;
+}
+
+.notification-item.warning .bar {
+  @apply bg-darkorange;
+}

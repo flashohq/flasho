@@ -1,0 +1,68 @@
+.main_layout_container {
+  @apply h-screen w-full;
+  @apply flex flex-col overflow-hidden;
+}
+
+.main_navbar {
+  @apply flex h-16 w-full items-center justify-between;
+}
+
+.main_container {
+  @apply relative flex;
+  height: calc(100% - 4rem);
+}
+
+.main_sidebar {
+  @apply sticky top-0 flex flex-col;
+  width: clamp(20em, 20em + 1rem, 19%);
+}
+
+.sidebar_navbar_top {
+  height: 100%;
+  width: clamp(20em, 20em + 1rem, 19%);
+  @apply flex items-center justify-center bg-honeydew;
+}
+
+.navbar_logo {
+  @apply h-12 cursor-pointer object-contain;
+}
+
+.sidebar_menu_container {
+  @apply w-full flex-grow bg-black pr-1 pt-1;
+}
+
+.sidebar_menu_wrap {
+  @apply h-full w-full flex-grow bg-inherit;
+}
+
+.navbar_link {
+  @apply mb-2 flex items-center justify-start px-4 py-2;
+}
+
+.navbar_link_active {
+  @apply mb-2 flex items-center justify-start rounded bg-red px-4 py-2;
+}
+
+.navbar_link_active > p {
+  @apply opacity-100;
+}
+
+.navbar_link_text {
+  @apply ml-6 font-semibold text-honeydew opacity-80 hover:opacity-100;
+  font-size: clamp(1.35rem, 1.2vh, 1.5rem);
+}
+
+.main_content {
+  @apply flex flex-col;
+  width: clamp(100% - 20em, 100% - 21em, 81%);
+}
+
+.content_navbar_top {
+  height: 100%;
+  width: clamp(100% - 20em, 100% - 21em, 81%);
+  @apply flex items-center bg-honeydew;
+}
+
+.content_container {
+  @apply h-full w-full flex-grow overflow-y-auto bg-black pt-1;
+}

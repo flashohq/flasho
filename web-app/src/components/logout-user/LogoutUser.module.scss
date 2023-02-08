@@ -1,0 +1,9 @@
+@import '../../styles/Colors.module';
+
+.content {
+  width: 100%;
+  height: calc(100% - 4rem);
+  background-color: $white;
+  position: relative;
+  padding: 1rem;
+}

@@ -1,0 +1,42 @@
+@import '../../../styles/Colors.module';
+
+.step_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  flex-direction: column;
+  background-color: $white;
+}
+
+.step_header {
+  width: 100%;
+  height: 4rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $black;
+  background-color: $dull-white;
+  border-radius: 0.5rem;
+}
+
+.step_body {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  background-color: inherit;
+  position: relative;
+}
+
+.bottom_button_container {
+  width: 100%;
+  height: 4rem;
+  background-color: inherit;
+  position: sticky;
+  bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

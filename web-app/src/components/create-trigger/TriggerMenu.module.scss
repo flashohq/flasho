@@ -1,0 +1,24 @@
+.main_container {
+  @apply flex h-full w-full flex-col rounded-md;
+}
+
+.main_wrap {
+  @apply flex h-full w-full flex-col;
+}
+
+.main_header {
+  @apply relative flex h-16 w-full items-center justify-center rounded-t-md bg-gray;
+}
+
+.main_content_container {
+  @apply flex w-full flex-col overflow-hidden rounded-b-md bg-white;
+  height: calc(100% - 4rem);
+}
+
+.main_content_header {
+  @apply flex h-16 w-full items-center justify-center;
+}
+
+.main_content_wrap {
+  @apply flex h-full w-full flex-col;
+}

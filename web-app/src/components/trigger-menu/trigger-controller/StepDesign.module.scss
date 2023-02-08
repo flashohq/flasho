@@ -1,0 +1,49 @@
+@import '../../../styles/Colors.module';
+
+.header {
+  width: 100%;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: auto;
+}
+
+.default {
+  height: 48px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: x-large;
+}
+
+.isFirst {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  margin-left: 2rem;
+  margin-right: 1rem;
+  background-image: url('/icons/arrow-1-grey.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left;
+  &.isActive {
+    background-image: url('/icons/arrow-1-blue.svg');
+  }
+}
+
+.isNotFirst {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  background-image: url('/icons/arrow-2-grey.svg');
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  &.isActive {
+    background-image: url('/icons/arrow-2-blue.svg');
+  }
+}

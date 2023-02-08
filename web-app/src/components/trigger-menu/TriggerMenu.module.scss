@@ -1,0 +1,61 @@
+@import '../../styles/Colors.module';
+
+.main_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  border-radius: 0.5rem;
+  //padding: 0.5rem;
+}
+
+.main_wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  flex-direction: column;
+}
+
+.main_header {
+  width: 100%;
+  height: 4rem;
+  border-radius: 0.5rem;
+  background-color: $gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.main_content_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  background-color: $white;
+  border-radius: 0.5rem;
+}
+
+.main_content_header {
+  width: 100%;
+  height: 5rem;
+  background-color: $honeydew;
+  border-radius: 0.5rem;
+}
+
+.main_content_wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  border-radius: 0.5rem;
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+}
+
+.main_content_wrap::-webkit-scrollbar {
+  width: 0 !important;
+}

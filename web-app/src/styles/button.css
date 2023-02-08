@@ -1,0 +1,59 @@
+.button_defaults {
+  @apply flex items-center justify-center transition-all;
+  @apply bg-red;
+  @apply hover:opacity-80;
+  @apply h-12 rounded-md;
+  @apply cursor-pointer px-8;
+}
+
+.button_defaults_lg {
+  @apply flex items-center justify-center transition-all;
+  @apply bg-red;
+  @apply hover:opacity-80;
+  @apply rounded-md;
+  @apply cursor-pointer px-8;
+  height: 55px;
+}
+.button_defaults_xl {
+  @apply flex items-center justify-center transition-all;
+  @apply bg-red;
+  @apply hover:opacity-80;
+  @apply h-20 rounded-md;
+  @apply cursor-pointer px-8;
+}
+
+.button_text {
+  @apply text-xl font-semibold text-white opacity-100;
+}
+
+.button_text_lg {
+  @apply text-2xl font-semibold text-white opacity-100;
+}
+
+.button_text_xl {
+  @apply text-2xl font-semibold text-white opacity-100;
+}
+
+.option_button_default {
+  @apply h-16 w-96 cursor-pointer rounded;
+  @apply border border-gray bg-dullwhite transition-all hover:bg-gray;
+  @apply shadow-lg hover:shadow;
+}
+
+.icon_button_default {
+  @apply flex items-center justify-center rounded-md border-2;
+  @apply cursor-pointer transition-all hover:opacity-90;
+  @apply h-12 px-2 py-4 shadow-lg hover:shadow-none;
+}
+
+.icon_button_default > * {
+  @apply opacity-100;
+}
+
+.icon_button_default > p {
+  @apply text-lg font-medium;
+}
+
+.icon_button_icon_default {
+  @apply mr-2 h-8 w-8 object-contain;
+}

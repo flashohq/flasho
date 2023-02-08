@@ -1,0 +1,155 @@
+@use '../../../styles/Fonts.scss' as font;
+@import '../../../styles/Colors.module';
+
+.conditions_conditions_container {
+  height: clamp(48vh, 49vh, 54vh);
+  position: relative;
+  @apply mb-20 py-3;
+}
+
+.conditions_container {
+  @apply flex w-full flex-col items-center  bg-blue py-4;
+  height: calc(100% - 9rem);
+  margin-bottom: 5rem;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.conditions_container::-webkit-scrollbar {
+  width: none;
+}
+
+.conditions_wrap {
+  @apply flex h-full w-full flex-col  items-center bg-blue;
+}
+
+.define_condition {
+  width: 15rem;
+  height: 3.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border: 2px solid $red;
+  font-weight: 600;
+  color: $red;
+  position: absolute;
+  right: 1rem;
+  bottom: 2rem;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.08, 0.52, 0.52, 1);
+
+  .icon {
+    color: $red;
+  }
+  &:hover {
+    color: $honeydew;
+    background-color: $red;
+    .icon {
+      color: $honeydew;
+    }
+  }
+}
+
+// .conditions_wrap {
+//   width: 65%;
+//   border-radius: 0.5rem;
+//   background-color: $empty3;
+//   padding: 1rem 0;
+// }
+
+// .conditions_box {
+//   background-color: inherit;
+//   padding: 1rem 3rem;
+// }
+
+.add_condition {
+  width: 5rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  color: $red;
+  border: 2px solid $red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.08, 0.52, 0.52, 1);
+
+  &:hover {
+    background-color: $red;
+    color: $honeydew;
+  }
+}
+
+.applied_condition {
+  width: 3rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  color: $red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step_container {
+  width: 100%;
+  height: calc(100% - 4rem);
+  display: flex;
+  flex-flow: column;
+  flex-direction: column;
+  background-color: $white;
+  position: relative;
+}
+
+.step_header {
+  width: 100%;
+  height: 64px;
+  padding: 0.5rem 0;
+  font-size: x-large;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $black;
+  background-color: $dull-white;
+  border-radius: 0.5rem;
+}
+
+.step_body {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  background-color: inherit;
+  position: relative;
+}
+
+.bottom_button_container {
+  width: 100%;
+  padding: 0.5rem 0;
+  height: 5rem;
+  background-color: inherit;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// .conditions_container {
+//   height: 500px;
+//   margin-top: 1rem;
+//   background-color: inherit;
+//   padding: 1rem 0;
+//   overflow-y: scroll;
+//   scroll-behavior: smooth;
+//   -ms-overflow-style: none; /* IE and Edge */
+//   scrollbar-width: none;
+// }
+
+.next_button {
+  @include font.sec-font;
+}

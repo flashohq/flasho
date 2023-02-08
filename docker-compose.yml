@@ -1,0 +1,8 @@
+version: '2'
+services:
+  flasho:
+    build: .
+    ports:
+          - '80:5000'
+    restart: always
+

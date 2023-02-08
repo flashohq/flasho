@@ -1,0 +1,80 @@
+.modal_body {
+  @apply flex items-center justify-center;
+  @apply left-0 top-0 z-50;
+  @apply h-full w-full select-none overflow-auto bg-black3;
+}
+
+.modal_container {
+  @apply rounded-lg bg-white;
+}
+
+.modal_header {
+  @apply flex items-center justify-between;
+  @apply rounded-t-lg bg-gray p-3.5;
+}
+
+.modal_title {
+  @apply px-5 text-xl font-medium;
+}
+
+.modal_content {
+  @apply my-8 bg-white px-12;
+}
+
+.v_stack {
+  @apply flex flex-col items-center justify-center;
+}
+
+.h_stack {
+  @apply flex items-center justify-center;
+}
+
+.modal_input {
+  @apply m-1 w-80 rounded-md  bg-honeydew p-2.5;
+  @apply border-[1px] border-gray focus:outline-lightblue;
+}
+
+.modal_input_disabled {
+  @apply m-1 w-80 rounded-md  bg-gray p-2.5 text-black;
+  @apply border-[1px] border-gray;
+}
+
+.input_label {
+  @apply m-1 w-40 py-2.5 text-right;
+}
+
+.input_label_styled {
+  @apply absolute left-2 top-2 z-10 mb-1 px-1;
+  @apply text-base font-medium lowercase text-gray2;
+  @apply group-focus-within:-top-2 group-focus-within:z-10;
+  @apply group-focus-within:bg-white group-focus-within:font-semibold;
+  @apply group-focus-within:text-sm group-focus-within:text-blue;
+}
+.input_label_fixed {
+  @apply absolute -top-2 left-2 z-10 bg-white px-1 text-sm font-semibold lowercase text-blue;
+}
+
+.modal_footer {
+  @apply flex items-center justify-end;
+  @apply my-5 rounded-b-lg bg-white px-10;
+}
+
+.modal_button {
+  @apply rounded p-2 px-4 font-bold text-honeydew;
+  @apply bg-lightblue2 hover:bg-blue3;
+}
+
+.modal_button_disabled {
+  @apply rounded  p-2 px-4 font-bold text-honeydew;
+  @apply bg-darkgray hover:cursor-not-allowed;
+}
+
+.modal_red_button {
+  @apply rounded  p-2 px-4 font-bold text-honeydew;
+  @apply bg-red2 hover:bg-darkred;
+}
+
+.modal_green_button {
+  @apply rounded  p-2 px-4 font-bold text-honeydew;
+  @apply bg-green hover:opacity-100 opacity-75;
+}

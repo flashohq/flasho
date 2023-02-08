@@ -1,0 +1,1 @@
+npx concurrently 'node server.js' 'uvicorn app.api:app --reload' 'nginx' 'python3 app/event_handlers/event_subscriber.py'
