@@ -71,8 +71,6 @@ docker run -p 8080:8080 vishnau97/flasho-test
 ```
 
 3. You can now visit [http://localhost:8080](http://localhost:8080) to start using Flasho
-
-<br/>
 <br/>
 
 # Status
@@ -83,4 +81,10 @@ We are currently in Public Aplha. Version v0.0.1
 
 # License
 
-Flasho is open source and released under the MIT License
+Most of Flasho’s code is under the MIT licence, as included in the Flasho repository on GitHub. Code of paid features if any, however, is covered by a proprietary licence.
+
+Any third party components incorporated into our code are licensed under the original licence provided by the owner of the applicable component.
+
+# Links 
+- [Homepage](https://flasho.io)
+- [Contribution Guidelines](https://github.com/flashohq/flasho/blob/master/CONTRIBUTING.md)
