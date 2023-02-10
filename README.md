@@ -85,6 +85,11 @@ Most of Flasho’s code is under the MIT licence, as included in the Flasho repo
 
 Any third party components incorporated into our code are licensed under the original licence provided by the owner of the applicable component.
 
+# Need Help ?
+
+We are always there to help you. If you are facing any issues or problems while working on this project , join our discord [server]( https://discord.gg/DZ5PKmj6vc)
+and ask for help. Connect with other developers on the Discord [community](https://discord.gg/DZ5PKmj6vc) and discuss anything related to the project.
 # Links 
 - [Homepage](https://flasho.io)
 - [Contribution Guidelines](https://github.com/flashohq/flasho/blob/master/CONTRIBUTING.md)
+- [Code of Conduct](https://github.com/flashohq/flasho/blob/master/CODE_OF_CONDUCT.md)
