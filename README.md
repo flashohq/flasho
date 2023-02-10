@@ -87,8 +87,8 @@ Any third party components incorporated into our code are licensed under the ori
 
 # Need Help ?
 
-We are always there to help you. If you are facing any issues or problems while working on this project , join our discord [server]( https://discord.gg/DZ5PKmj6vc)
-and ask for help. Connect with other developers on the Discord [community](https://discord.gg/DZ5PKmj6vc) and discuss anything related to the project.
+We are always there to help you. If you are facing any issues or problems while working on this project , join our [discord server]( https://discord.gg/DZ5PKmj6vc)
+and ask for help. Connect with other developers on the [Discord community](https://discord.gg/3b4hzsyC4X) and discuss anything related to the project.
 # Links 
 - [Homepage](https://flasho.io)
 - [Contribution Guidelines](https://github.com/flashohq/flasho/blob/master/CONTRIBUTING.md)
