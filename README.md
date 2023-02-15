@@ -35,12 +35,15 @@ Just connect your database, set up event triggers, create content and connect to
 
 # Quick Start
 
-To create your free self-hosted Flasho environment use our docker image. Docker deployment is available for the following cloud environments.
+To create your free self-hosted Flasho environment use our [docker image](https://hub.docker.com/r/flashohq/flasho).
+Docker deployment is available for the following cloud environments.
 
 - [AWS](https://docs.flasho.io/docs/deployment-guides/aws)
 - [Azure](https://docs.flasho.io/docs/deployment-guides/azure)
 - [GCP](https://docs.flasho.io/docs/deployment-guides/google-cloud-platform)
 - [Digital Ocean](https://docs.flasho.io/docs/deployment-guides/digital-ocean)
+
+ 
 
 ## Using Flasho locally using Docker
 
