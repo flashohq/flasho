@@ -12,7 +12,9 @@ Read more at [flasho.io](https://flasho.io) and the [docs](https://docs.flasho.i
 
 ## Why Flasho?
 
-We want to transform the way products communicate with their users - make communication faster, smarter and more effective. Our goal is to help developers set up a highly personalised, sophisticated user communication system in minutes! A system that increases customer delight by sending the right messages, to the right people at the right time!
+Managing product notifications in your codebase can get messy. Not only do you have to write microservices and integrate with a bunch of different service providers but also make multiple changes across different parts of your code every time you want to set up new notifications or make changes to existing ones. In comes Flasho-  a single place to manage all your customer communication across channels. 
+
+Just connect your database, set up event triggers, create content and connect to the service provider of your choice through our DIY dashboard.  Since it is self hosted, your customer data never leaves your servers. We believe that developers should spend their time on building their core product. That's why we are building Flasho, to make the process of setting up and managing customer notifications an absolute breeze!
 
 ## Features
 
