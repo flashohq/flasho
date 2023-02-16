@@ -72,7 +72,7 @@ docker pull flashohq/flasho:latest
 2. You can run the docker container using this command
 
 ```jsx
-docker run -p 8080:8080 vishnau97/flasho-test
+docker run -p 8080:8080 flashohq/flasho
 ```
 
 3. You can now visit [http://localhost:8080](http://localhost:8080) to start using Flasho
