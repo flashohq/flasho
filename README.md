@@ -1,6 +1,6 @@
 # Flasho
 
-<a href="https://flasho.io/"><img src="https://flasho-stage.chutneystore.com/logo/logo.svg" align="right" ></a>
+<a href="https://flasho.io/"><img height = "90px" src="https://flasho.io/logo/flasho.svg" align="right" ></a>
 Flasho is an open source platform for developers to set up customer notifications in less than 5 minutes.
 
 
