@@ -1,14 +1,12 @@
 import axios from 'axios';
 
 const axiosInstance = axios.create({
-  baseURL: '/api'
-  // baseURL: 'http://localhost:8000/api'
+  baseURL: process.env.NODE_ENV === 'production' ? '/api' : 'http://localhost:8000/api'
 });
 
 // use below instance to not include authorization header in request
 export const axiosInstance2 = axios.create({
-  baseURL: '/api'
-  // baseURL: 'http://localhost:8000/api'
+  baseURL: process.env.NODE_ENV === 'production' ? '/api' : 'http://localhost:8000/api'
 });
 
 axiosInstance.interceptors.request.use((config: any) => {
