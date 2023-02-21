@@ -52,7 +52,6 @@ If you want us to add a provider, we don't have yet, you can just request by cre
 - Python version v3.9.12
 - Node.JS version v18.0.0
 - Postgres([Setup](https://www.prisma.io/dataguide/postgresql/setting-up-a-local-postgresql-database))
-- [nginx](https://www.nginx.com)
 - [yarn](https://yarnpkg.com) 
 - [pip](https://packaging.python.org/en/latest/tutorials/installing-packages/) - (if you want to add packages to the backend)
 
@@ -66,7 +65,7 @@ After cloning your fork,
 
 - Install all the python dependencies
   
-```
+```jsx
 pip install -r requirements.txt
 ```
 
@@ -77,22 +76,20 @@ uvicorn --reload app.api:app
 ```
 
 #### 2. Frontend
-
+- This will install all the npm libraries
 ```jsx
 cd web-app && yarn
 ```
+
+- You can run the development environment
+  
 ```jsx
 yarn dev
 ```
 
-#### To access the backend and frontend run
-```jsx
-nginx
-```
-
 You can access the apps in 
-1. Frontend @ [http://localhost:8080](http://localhost:8080)
-1. Backend @ [http://localhost:8080/api/](https://localhost:8080/api/)
+1. Frontend @ [http://localhost:3000](http://localhost:8080)
+2. Backend @ [http://localhost:8000/api/](https://localhost:8080/api/)
 
 
 ## Coding guidelines
