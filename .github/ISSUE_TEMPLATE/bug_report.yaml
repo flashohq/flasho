@@ -1,7 +1,7 @@
-name: 🐞 Bug
-description: File a bug/issue
-title: "[BUG] <title>"
-labels: [Bug, Needs Triage]
+name: Issue: 🐞 Bug Report
+description: File a bug/issue to help us improve our platform
+title: "🐞 Bug Report: "
+labels: [🐞 Bug, Needs Triage]
 body:
 - type: checkboxes
   attributes:
