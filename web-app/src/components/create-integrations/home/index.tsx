@@ -20,7 +20,8 @@ const Home = (props: any) => {
     openConnectPinpointEmail,
     openConnectPinpointSMS,
     openConnectSendGrid,
-    openConnectTwilio
+    openConnectTwilio,
+    openConnectMessageBird
   } = props;
 
   const dispatch = useDispatch();
@@ -101,6 +102,10 @@ const Home = (props: any) => {
           case 'Twilio': {
             openConnectTwilio();
             break;
+          }
+          case 'MessageBird': {
+            openConnectMessageBird();
+            break;            
           }
         }
         break;
@@ -340,7 +345,8 @@ Home.propTypes = {
   openConnectPinpointEmail: PropTypes.func,
   openConnectPinpointSMS: PropTypes.func,
   openConnectTwilio: PropTypes.func,
-  openConnectSendGrid: PropTypes.func
+  openConnectSendGrid: PropTypes.func,
+  openConnectMessageBird: PropTypes.func
 };
 
 export default Home;

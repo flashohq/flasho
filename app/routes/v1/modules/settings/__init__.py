@@ -13,6 +13,7 @@ from ..email.twilio_sendgrid import initialize_sendgrid, SendgridParams
 from ..sms.sns import initialize_sns_service, SNSParameters
 from ..sms.twilio import initialize_twilio_sms, TwilioParams
 from ..sms.pinpoint_sms import initialize_pinpoint_sms_service, PinpointParams
+from ..sms.message_bird import initialize_message_bird_sms, MessageBirdParams
 from app.utils import config
 
 
@@ -112,6 +113,13 @@ def initialize_twilio_sms_service(twilio_params: TwilioParams):
     initialize_twilio_sms(twilio_params)
 
     return {"status": "success", "message": "The Twilio service has been initialized"}
+
+
+@router.post("/initialize_message_bird", response_model=ResponseStatus)
+def initalize_message_bird_sms_service(message_bird_params: MessageBirdParams):
+    initialize_message_bird_sms(message_bird_params)
+
+    return {"status": "success", "message": "The MessageBird service has been initialized"}
 
 
 @router.get("/get_integrations")

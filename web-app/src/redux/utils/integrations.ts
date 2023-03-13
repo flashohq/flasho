@@ -5,7 +5,7 @@ import { INTEGRATIONS, LABELS, SERVICES } from '../types/integration';
 export const getIntegrationList = async () => {
   const res = await axiosInstance.get('/v1/settings/get_integrations');
   const data = await res.data;
-  return structResponse(data);
+  return await structResponse(data);
 };
 
 // function to fetch the label based on the typeof Service

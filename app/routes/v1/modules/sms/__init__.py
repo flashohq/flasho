@@ -6,6 +6,7 @@ from app.db import get_cursor, validate_db_connection
 from . import sns
 from . import twilio
 from . import pinpoint_sms
+from . import message_bird
 from .templates import SMSTemplate, create_sms_template, get_sms_templates
 
 router = APIRouter()
@@ -90,6 +91,13 @@ def send_SMS(sms_parameters: SMSParameters, http_response: Response):
             body=sms_parameters.message_body
         )
         response = twilio.send_sms_twilio(twilio_sms_parameters, http_response)
+    
+    elif service_selection == 'message_bird':
+        message_bird_sms_parameters = message_bird.MessageBirdSMSParameters(
+            receipient_phone_number=sms_parameters.receipient_phone_number,
+            body=sms_parameters.message_body
+        )
+        response = message_bird.send_sms_message_bird(message_bird_sms_parameters, http_response)
 
     return response
 
@@ -103,6 +111,11 @@ def send_SMS_Pinpoint(sms_parameters: pinpoint_sms.PinpointSMSParameters, http_r
 @router.post("/send_sms_twilio")
 def sms_twilio(sms_parameters: twilio.TwilioSMSParameters, http_response: Response):
     response = twilio.send_sms_twilio(sms_parameters, http_response)
+    return response
+
+@router.post("/send_sms_message_bird")
+def sms_message_bird(sms_parameters: message_bird.MessageBirdSMSParameters, http_response: Response):
+    response = message_bird.send_sms_message_bird(sms_parameters, http_response)
     return response
 
 
@@ -184,6 +197,15 @@ def send_templated_sms(template_id: int, phone_numbers: list[str], variables_dat
             )
             response = twilio.send_sms_twilio(
                 twilio_sms_parameters, http_response)
+            
+    elif (service_name == "message_bird"):
+        for phone_number in phone_numbers:
+            message_bird_sms_parameters = message_bird.MessageBirdSMSParameters(
+                receipient_phone_number=phone_number,
+                body=message_body
+            )
+            response = message_bird.send_sms_message_bird(
+                message_bird_sms_parameters, http_response)
 
     return response
 
