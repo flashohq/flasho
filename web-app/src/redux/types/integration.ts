@@ -15,6 +15,7 @@ export interface LABELS {
   pinpoint: string;
   twilio: string;
   twilio_sendgrid: string;
+  message_bird: string
 }
 
 export const SERVICES: LABELS = {
@@ -23,7 +24,8 @@ export const SERVICES: LABELS = {
   sns: 'SNS',
   pinpoint: 'Pinpoint',
   twilio: 'Twilio',
-  twilio_sendgrid: 'SendGrid'
+  twilio_sendgrid: 'SendGrid',
+  message_bird: "MessageBird"
 };
 
 export type SERVICE_INTEGRATION = {

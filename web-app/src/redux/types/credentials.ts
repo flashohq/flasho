@@ -5,7 +5,8 @@ export enum SERVICE_TYPES {
   PINPOINT_SMS = 'pinpointsms',
   PINPOINT_EMAIL = 'pinpointemail',
   TWILIO = 'twilio',
-  SENDGRID = 'sendgrid'
+  SENDGRID = 'sendgrid',
+  MESSAGEBIRD = "messagebird"
 }
 
 export interface DB_CREDENTIALS {
@@ -64,6 +65,12 @@ export interface TWILIO_CREDENTIALS {
   isReconfigure?: boolean;
 }
 
+export interface MESSAGEBIRD_CREDENTIALS {
+  message_bird_access_key: string
+  source_phone_number: string
+  isReconfigure?: boolean
+}
+
 export interface CREDENTIALS {
   [service_name: string]:
     | DB_CREDENTIALS
@@ -72,5 +79,6 @@ export interface CREDENTIALS {
     | TWILIO_CREDENTIALS
     | SENDGRID_CREDENTIALS
     | PINPOINT_EMAIL_CREDENTIALS
-    | PINPOINT_SMS_CREDENTIALS;
+    | PINPOINT_SMS_CREDENTIALS
+    | MESSAGEBIRD_CREDENTIALS;
 }

@@ -8,7 +8,7 @@ from app.utils import config
 def get_integrations():
     load_dotenv()
     response = {"db": {"postgres": {}},
-                "email": {"ses": {}, "pinpoint": {}, "twilio_sendgrid": {}}, "sms": {"sns": {}, "twilio": {}, "pinpoint": {}}}
+                "email": {"ses": {}, "pinpoint": {}, "twilio_sendgrid": {}}, "sms": {"sns": {}, "twilio": {}, "pinpoint": {}, "message_bird": {}}}
     response["db"]["postgres"]["is_connected"] = True if 'PG_USER' in os.environ else False
     response["email"]["ses"]["is_connected"] = True if 'SES_ACCESS_KEY' in os.environ else False
     response["email"]["ses"]["is_active"] = os.environ["SES_IS_ACTIVE"] == "yes" if 'SES_IS_ACTIVE' in os.environ else False
@@ -22,6 +22,8 @@ def get_integrations():
     response["sms"]["twilio"]["is_active"] = os.environ["TWILIO_IS_ACTIVE"] == "yes" if 'TWILIO_IS_ACTIVE' in os.environ else False
     response["sms"]["pinpoint"]["is_connected"] = True if 'PINPOINT_SENDER_NUMBER' in os.environ else False
     response["sms"]["pinpoint"]["is_active"] = os.environ["PINPOINT_SMS_IS_ACTIVE"] == "yes" if 'PINPOINT_SMS_IS_ACTIVE' in os.environ else False
+    response["sms"]["message_bird"]["is_connected"] = True if 'MESSAGEBIRD_SENDER_PHONE_NUMBER' in os.environ else False
+    response["sms"]["message_bird"]["is_active"] = os.environ["MESSAGEBIRD_IS_ACTIVE"] == "yes" if 'MESSAGEBIRD_IS_ACTIVE' in os.environ else False
     return response
 
 
@@ -81,6 +83,12 @@ def get_credentials(service_name):
             "twilio_auth_token": os.environ['TWILIO_AUTH_TOKEN'],
             "twilio_phone_number": os.environ['TWILIO_SENDER_PHONE_NUMBER']
         }
+    
+    elif service_name == "message_bird":
+        return {
+            "messagebird_access_key": os.environ['MESSAGEBIRD_ACCESS_KEY'],
+            "messagebird_phone_number": os.environ['MESSAGEBIRD_SENDER_PHONE_NUMBER']
+        }
 
     else:
         return "Service not found"
@@ -118,7 +126,12 @@ def toggle_service_active(service_name):
             config.set_env_variable(
                 "TWILIO_IS_ACTIVE", "yes" if os.environ["TWILIO_IS_ACTIVE"] == "no" else "no")
             return {"new_status": os.environ["TWILIO_IS_ACTIVE"]}
-
+        
+        elif service_name == "message_bird":
+            print("HERE")
+            config.set_env_variable(
+                "MESSAGEBIRD_IS_ACTIVE", "yes" if os.environ["MESSAGEBIRD_IS_ACTIVE"] == "no" else "no"
+            )
     except:
         return {
             "status": "failed",
@@ -164,6 +177,11 @@ def delete_integration(integration_name):
         elif integration_name == 'twilio':
             required_key = ['TWILIO_ACC_SID',
                             'TWILIO_AUTH_TOKEN', 'TWILIO_SENDER_PHONE_NUMBER', 'TWILIO_IS_ACTIVE']
+            for key in required_key:
+                config.delete_env_variable(key)
+        elif integration_name == "message_bird":
+            required_key = ['MESSAGEBIRD_ACCESS_KEY', 
+                            'MESSAGEBIRD_SENDER_PHONE_NUMBER', 'MESSAGEBIRD_IS_ACTIVE']
             for key in required_key:
                 config.delete_env_variable(key)
         return {

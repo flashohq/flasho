@@ -15,7 +15,8 @@ const NewConnections = (props: any) => {
     openConnectAmazonPinpointSMS,
     openConnectAmazonPinpointEmail,
     openConnectTwilio,
-    openConnectTwilioSendGrid
+    openConnectTwilioSendGrid,
+    openConnectMessageBird
   } = props;
 
   const dbList: SERVICE_INTEGRATION[] = useSelector(
@@ -74,6 +75,10 @@ const NewConnections = (props: any) => {
           }
           case 'Twilio': {
             openConnectTwilio();
+            break;
+          }
+          case 'MessageBird': {
+            openConnectMessageBird();
             break;
           }
         }
@@ -290,7 +295,8 @@ NewConnections.propTypes = {
   openConnectAmazonPinpointSMS: PropTypes.func,
   openConnectAmazonPinpointEmail: PropTypes.func,
   openConnectTwilio: PropTypes.func,
-  openConnectTwilioSendGrid: PropTypes.func
+  openConnectTwilioSendGrid: PropTypes.func,
+  openConnectMessageBird: PropTypes.func
 };
 
 export default NewConnections;

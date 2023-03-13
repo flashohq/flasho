@@ -8,6 +8,7 @@ import AddTwilio from '../modals/AddTwilio';
 import AddTwilioSendGrid from '../modals/AddTwilioSendGrid';
 import AddAmazonPinpointSMS from '../modals/AddAmazonPinpointSMS';
 import AddAmazonPinpointEmail from '../modals/AddAmazonPinpointEmail';
+import AddMessageBird from '../modals/AddMessageBird';
 import ToggleConnection from '../modals/ToggleConnection';
 import DeleteService from '../modals/DeleteService';
 
@@ -31,6 +32,8 @@ const CreateIntegrations = () => {
   const [connectTwilio, setConnectTwilio] = useState<boolean>(false);
   const [connectTwilioSendGrid, setConnectTwilioSendGrid] =
     useState<boolean>(false);
+
+  const [connectMessageBird, setConnectMessageBird] = useState<boolean>(false);
 
   const openToggleActivation = () => {
     setToggleActivation(true);
@@ -64,6 +67,10 @@ const CreateIntegrations = () => {
   const openConnectAmazonPinpointEmail = () => {
     setConnectAmazonPinpointEmail(true);
   };
+
+  const openConnectMessageBird = () => {
+    setConnectMessageBird(true);
+  }
 
   return (
     <div className="h-full w-full rounded">
@@ -142,6 +149,15 @@ const CreateIntegrations = () => {
           isReconfigure={isReconfigure}
           setIsReconfigure={setIsReconfigure}
         />
+        <AddMessageBird 
+          open={connectMessageBird}
+          closeModal={() => {
+            setIsReconfigure(false);
+            setConnectMessageBird(false);
+          }}
+          isReconfigure={isReconfigure}
+          setIsReconfigure={setIsReconfigure}
+        />
 
         {menuTabState === 'home' && (
           <Home
@@ -159,6 +175,7 @@ const CreateIntegrations = () => {
             openConnectPinpointSMS={openConnectAmazonPinpointSMS}
             openConnectSendGrid={openConnectTwilioSendGrid}
             openConnectTwilio={openConnectTwilio}
+            openConnectMessageBird={openConnectMessageBird}
           />
         )}
         {menuTabState === 'add' && (
@@ -172,6 +189,7 @@ const CreateIntegrations = () => {
             openConnectAmazonPinpointEmail={openConnectAmazonPinpointEmail}
             openConnectTwilio={openConnectTwilio}
             openConnectTwilioSendGrid={openConnectTwilioSendGrid}
+            openConnectMessageBird={openConnectMessageBird}
           />
         )}
       </div>
